@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg version="1.1" id="svg1" width="960" height="320" viewBox="-480 -160 960 320" xmlns="http://www.w3.org/2000/svg">
+   <defs id="defs1">
+      <style>
+         .utf-8000-bits, .utf-8000-byte {
+            /* font-family: monospace; */
+            font-family: "Courier New", Courier, monospace;
+            font-size: 12pt;
+         }
+
+         .utf-8000-continuation-prefix-bits {
+            font-weight: bold;
+            fill: cyan;
+         }
+
+         .utf-8000-y-bits {
+            fill: orange;
+         }
+
+         .utf-8000-start-bits {
+            font-weight: bold;
+            fill: magenta;
+         }
+
+         .utf-8000-mandatory-content-bits {
+            font-weight: bold;
+            fill: lime;
+         }
+
+         .utf-8000-optional-content-bits {
+            fill: lime;
+         }
+      </style>
+   </defs>
+
+   <g>
+      <text text-anchor="middle" dominant-baseline="central">
+         <tspan x="-400" class="utf-8000-byte utf-8000-non-continuation-byte">
+            <tspan class="utf-8000-start-bits">11111111</tspan>
+         </tspan>
+         <tspan x="-300" class="utf-8000-byte utf-8000-continuation-byte">
+            <tspan class="utf-8000-continuation-prefix-bits">10</tspan><tspan class="utf-8000-start-bits">111111</tspan>
+         </tspan>
+         <tspan x="-200" class="utf-8000-byte utf-8000-continuation-byte">
+            <tspan class="utf-8000-continuation-prefix-bits">10</tspan><tspan class="utf-8000-start-bits">111111</tspan>
+         </tspan>
+         <tspan x="-100" class="utf-8000-byte utf-8000-continuation-byte">
+            <tspan class="utf-8000-continuation-prefix-bits">10</tspan><tspan class="utf-8000-start-bits">110</tspan><tspan class="utf-8000-mandatory-content-bits">xxx</tspan>
+         </tspan>
+         <tspan x="0" class="utf-8000-byte utf-8000-continuation-byte">
+            <tspan class="utf-8000-continuation-prefix-bits">10</tspan><tspan class="utf-8000-mandatory-content-bits">xx</tspan><tspan class="utf-8000-optional-content-bits">xxxx</tspan>
+         </tspan>
+         <tspan x="+100" class="utf-8000-byte utf-8000-continuation-byte">
+            <tspan class="utf-8000-continuation-prefix-bits">10</tspan><tspan class="utf-8000-optional-content-bits">xxxxxx</tspan>
+         </tspan>
+         <tspan x="+200" class="utf-8000-byte utf-8000-continuation-byte">
+            <tspan class="utf-8000-continuation-prefix-bits">10</tspan><tspan class="utf-8000-optional-content-bits">xxxxxx</tspan>
+         </tspan>
+         <tspan x="+300" class="utf-8000-byte">
+            <tspan>...</tspan>
+         </tspan>
+         <tspan x="+400" class="utf-8000-byte utf-8000-continuation-byte">
+            <tspan class="utf-8000-continuation-prefix-bits">10</tspan><tspan class="utf-8000-optional-content-bits">xxxxxx</tspan>
+         </tspan>
+      </text>
+   </g>
+
+   <g>
+
+   <polyline id="line-first-byte" points="-45,10 -45,0  +45,0  +45,10" fill="none" stroke-width="4" stroke="magenta" transform="translate(-400 -25)" />
+   <text text-anchor="middle" dominant-baseline="central" class="utf-8000-byte utf-8000-start-bits" transform="translate(-400 -40)">First Byte</text>
+
+   <polyline id="line-continuation-bytes" points="-45,10 -45,0 +745,0 +745,10" fill="none" stroke-width="4" stroke="cyan" transform="translate(-300 -25)" />
+   <text text-anchor="middle" dominant-baseline="central" class="utf-8000-byte utf-8000-continuation-prefix-bits" transform="translate(50 -40)">Continuation Bytes</text>
+
+   <polyline id="line-start-bytes" points="-45,10 -45,0 +345,0 +345,10" fill="none" stroke-width="4" stroke="magenta" transform="translate(-400 -75)" />
+   <text text-anchor="middle" dominant-baseline="central" class="utf-8000-byte utf-8000-start-bits" transform="translate(-250 -90)">Start Bytes</text>
+
+   <polyline id="line-mandatory-content-bytes" points="-45,-10 -45,0 +145,0 +145,-10" fill="none" stroke-width="4" stroke="lime" transform="translate(-100 +25)" />
+   <text text-anchor="middle" dominant-baseline="central" class="utf-8000-byte utf-8000-mandatory-content-bits" transform="translate(-50 +40)">Mandatory Content Bytes</text>
+
+   <polyline id="line-optional-content-bytes" points="-45,-10 -45,0 +545,0 +545,-10" fill="none" stroke-width="4" stroke="lime" transform="translate(-100 +75)" />
+   <text text-anchor="middle" dominant-baseline="central" class="utf-8000-byte utf-8000-optional-content-bits" transform="translate(150 +90)">Content Bytes</text>
+
+   </g>
+
+   <text text-anchor="middle" dominant-baseline="central" class="utf-8000-byte" x="230" y="-130">Anatomy of an example 22-byte UTF-8000 code unit</text>
+
+</svg>
